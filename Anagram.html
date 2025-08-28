@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Anagram</title>
+</head>
+
+<body>
+    <script>
+        function is_anagram(s1, s2) {
+            if (s1.length !== s2.length) {
+                return false;
+            }
+            s1 = s1.toLowerCase();
+            s2 = s2.toLowerCase();
+            while (s1.length > 0) {
+                let c = s1.charAt(0);
+                let index = s2.indexOf(c);
+
+                if (index === -1) {
+                    return false;
+                }
+                s1 = s1.replace(c, "");
+                s2 = s2.slice(0, index) + s2.slice(index + 1);
+            }
+            return true;
+        }
+
+        console.log("Result Of Anagram");
+        console.log(is_anagram("typhoon", "opython")); //condition is true because of the words present in the two strings are equal or same
+        console.log(is_anagram("Alice", "Bob")); //false-because of the strings does not contain same words so it false          
+
+    </script>
+</body>
+
+</html>

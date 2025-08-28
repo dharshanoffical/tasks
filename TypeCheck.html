@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>only_ints</title>
+</head>
+
+<body>
+    <script>
+        function only_ints(a, b) {
+            return Number.isInteger(a) && Number.isInteger(b);
+        }
+
+
+        console.log(only_ints(1, 2));
+        console.log(only_ints("a", 1));
+        console.log(only_ints(3.5, 2));
+        console.log(only_ints(10, 20));
+
+    </script>
+</body>
+
+</html>

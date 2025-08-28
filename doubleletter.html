@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Double_letter</title>
+</head>
+
+<body>
+    <script>
+        function double_letters(word) {
+            for (let i = 0; i < word.length - 1; i++) {
+                for (let j = i + 1; j < word.length; j++) {
+                    if (j === i + 1 && word[i] === word[j]) {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        console.log(double_letters("hello"));   // true ("ll")
+        console.log(double_letters("nono"));    // false
+        console.log(double_letters("coffee"));  // true ("ff")
+        console.log(double_letters("manoj"));   // false
+
+
+    </script>
+</body>
+
+</html>
